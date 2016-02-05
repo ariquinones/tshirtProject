@@ -1,0 +1,146 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-size: 0px; 
+}
+#container {
+	max-width: 80%;
+	margin: auto; 
+	padding: 10px; 
+}
+.box {
+	width: 30%;
+	display: inline-block;
+	vertical-align: top; 
+	border:  
+	margin: 5px;
+}
+.tshirt {
+	border: 1px solid;
+	border-color: rgb(88,176,236);
+	max-width: 98%;
+	height: 50%; 
+	margin: auto;
+}
+.icons {
+	max-width: 98%;
+	margin: auto;
+	position: relative;
+}
+.pricing {
+	max-width: 98%;
+	height: 25px; 
+}
+.pricing > div {
+	display: inline-block;  
+	width: 50%;
+}
+h1 {
+	font-size: 20px; 
+	font-weight: bold; 
+	color: rgb(88,176,236);
+}
+h2 {
+	font-size: 20px;
+	font-weight: bold;
+	color: rgb(88,176,236);
+	text-align: right; 
+}
+.googleicons {
+	height: 20%;
+	width: 20%;
+	color: rgb(88,176,236);
+	border: 1px solid; 
+	text-align: center;
+	padding: 5px; 
+}
+img {
+	width: 80%; 
+	height: 80%;
+	display: block;
+	margin: auto; 
+	margin-bottom: 10px; 
+}
+.googleicons:hover {
+	background-color: rgb(88,176,236);
+	color: white;
+}
+.rotateicon {
+	margin-left: 85%;
+	-webkit-transform: rotateX(180deg);
+	height: 15%;
+	width: 15%;
+}
+
+#cropsquare:hover + #colorOption {
+	visibility: visible;
+	transition: 2s; 
+	transform: translate(0,20%);
+}
+#colorOption {
+	border: 1px solid;
+	border-color: rgb(88,176,236);
+	background: white; 
+	height: 60px;
+	width: 60px; 
+	text-align: center;
+	padding-top: 5px;
+	position: absolute; 
+	top: -200%;
+	left: 57%;
+	visibility: hidden;
+}
+/*#cropsquare {
+	position: relative;
+}*/
+.colorbox {
+	display: inline-block;
+	margin: 3px; 
+	height: 30%;
+	width: 30%; 
+}
+#blue {
+	background: blue; 
+}
+#pink {
+	background: pink;
+}
+#green {
+	background: green;
+}
+#yellow {
+	background: orange; 
+}
+#tshirtSizeSelection {
+	border: 1px solid; 
+	border-color: rgb(88,176,236);
+	background: white; 
+	width: 50px;
+	height: 130px; 
+	position: absolute;
+	top: -390%; 
+	left: 40%;
+	padding-left: 10px;
+	padding-top: 5px;
+	visibility: hidden;
+}
+.tshirtsize {
+	height: 30px;
+	width: 30px; 
+	margin: 0px; 
+	opacity: .75; 
+}
+.tshirtsize:hover {
+	opacity: 1;
+}
+#size:hover + #tshirtSizeSelection {
+	visibility: visible;
+	transition: 2s; 
+	transform: translate(0,10%);
+}
+
+
+
+
+
