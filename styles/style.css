@@ -5,27 +5,63 @@ body {
 	font-size: 0px; 
 }
 #container {
-	max-width: 80%;
-	margin: auto; 
-	padding: 10px; 
+	max-width: 100%;
+	margin: 5%; 
+	padding: 10px;
 }
 .box {
 	width: 30%;
 	display: inline-block;
-	vertical-align: top; 
-	border:  
-	margin: 5px;
+	vertical-align: top;
+	margin: 10px;
+}
+.x {
+	width: 25px;
+	height: 25px; 
+	right: -1px; 
+	top: -1px;
+	position: absolute;
+}
+#rotator {
+	color: rgb(88,176,236);
+	border: 1px solid rgb(88,176,236);
+	transform: rotateX(180deg);
+}
+input[type="checkbox"] {
+	opacity: 0;
 }
 .tshirt {
-	border: 1px solid;
-	border-color: rgb(88,176,236);
-	max-width: 98%;
-	height: 50%; 
-	margin: auto;
+	border: 2px solid rgb(88,176,236); 
+	position: relative; 
+}
+.shirtFlip {
+	margin-top: 10%;
+	margin-bottom: 10%;
+	height: 230px; 
+	position: relative; 
+	transition: .5s transform ease;
+	transform-style: preserve-3d;
+}
+.shirtimage {
+	width: 75%;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	position: absolute;
+	backface-visibility: hidden;
+}
+#back {
+	transform: translateY(-50%) rotateY(180deg);
+}
+input[type="checkbox"]:checked ~ .shirtFlip {
+	transform: rotateY(180deg);
+}
+input[type="checkbox"]:checked ~ #rotator {
+	background-color: rgb(88,176,236);
 }
 .icons {
-	max-width: 98%;
-	margin: auto;
+	margin-top: -2px;
+	border: 1px solid rgb(88,176,236);
 	position: relative;
 }
 .pricing {
@@ -51,96 +87,116 @@ h2 {
 	height: 20%;
 	width: 20%;
 	color: rgb(88,176,236);
-	border: 1px solid; 
+	border: 1px solid rgb(88,176,236); 
 	text-align: center;
 	padding: 5px; 
-}
-img {
-	width: 80%; 
-	height: 80%;
-	display: block;
-	margin: auto; 
-	margin-bottom: 10px; 
 }
 .googleicons:hover {
 	background-color: rgb(88,176,236);
 	color: white;
 }
-.rotateicon {
-	margin-left: 85%;
-	-webkit-transform: rotateX(180deg);
-	height: 15%;
-	width: 15%;
-}
-
-#cropsquare:hover + #colorOption {
+#cropsquare:hover ~ #colorOption, #colorOption:hover {
 	visibility: visible;
-	transition: 2s; 
-	transform: translate(0,20%);
+	transition: 1s; 
+	top: -170%;
 }
 #colorOption {
 	border: 1px solid;
 	border-color: rgb(88,176,236);
 	background: white; 
 	height: 60px;
-	width: 60px; 
+	width: 58px; 
 	text-align: center;
 	padding-top: 5px;
 	position: absolute; 
-	top: -200%;
-	left: 57%;
+	top: -190%;
+	left: 70%;
 	visibility: hidden;
+	transform: translateX(-50%);
 }
-/*#cropsquare {
-	position: relative;
-}*/
 .colorbox {
 	display: inline-block;
 	margin: 3px; 
-	height: 30%;
-	width: 30%; 
+	height: 36%;
+	width: 36%; 
+	opacity: .75;
+}
+.colorbox:hover {
+	opacity: 1;
 }
 #blue {
-	background: blue; 
+	background: rgb(88,176,236); 
 }
 #pink {
-	background: pink;
+	background: rgb(223,91,154);
 }
 #green {
-	background: green;
+	background: rgb(108,180,127);
 }
-#yellow {
-	background: orange; 
+#orange {
+	background: rgb(223,163,97); 
 }
 #tshirtSizeSelection {
-	border: 1px solid; 
-	border-color: rgb(88,176,236);
+	border: 1px solid rgb(88,176,236); 
 	background: white; 
-	width: 50px;
-	height: 130px; 
+	width: 60px; 
 	position: absolute;
-	top: -390%; 
-	left: 40%;
-	padding-left: 10px;
+	top: -460%; 
+	left: 50%;
 	padding-top: 5px;
+	padding-bottom: 5px; 
+	text-align: center; 
 	visibility: hidden;
+	transform: translateX(-50%);
 }
 .tshirtsize {
-	height: 30px;
-	width: 30px; 
+	height: 60%;
+	width: 60%; 
 	margin: 0px; 
 	opacity: .75; 
 }
 .tshirtsize:hover {
 	opacity: 1;
 }
-#size:hover + #tshirtSizeSelection {
+#size:hover ~ #tshirtSizeSelection, #tshirtSizeSelection:hover {
 	visibility: visible;
-	transition: 2s; 
-	transform: translate(0,10%);
+	transition: 1s ease; 
+	top: -420%;
+}
+#arrow_down1 {
+	position: absolute;
+	bottom: -3.5%;
+	left: 40%; 
+	display: block; 
+	background:	white;
+	width: 10px;
+	height: 10px;
+	border-right: 1px solid rgb(88,176,236);
+	border-top: 1px solid rgb(88,176,236);  
+	transform: rotate(135deg);  
+}
+#arrow_down2 {
+	position: absolute;
+	bottom: -9%;
+	left: 40%; 
+	display: block; 
+	background: white;
+	width: 10px;
+	height: 10px;
+	border-right: 1px solid rgb(88,176,236);
+	border-top: 1px solid rgb(88,176,236);  
+	transform: rotate(135deg);
 }
 
-
+@media only screen and (max-width: 770px) {
+	.box {
+		display: block; 
+		margin-top: 10%; 
+		margin-left: auto;
+		margin-right: auto; 
+		width: 45%;
+	}
+}
 
 
 
