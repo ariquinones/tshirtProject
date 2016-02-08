@@ -98,7 +98,7 @@ h2 {
 #cropsquare:hover ~ #colorOption, #colorOption:hover {
 	visibility: visible;
 	transition: 1s; 
-	transform: translate(0,15%);
+	top: -170%;
 }
 #colorOption {
 	border: 1px solid;
@@ -110,8 +110,9 @@ h2 {
 	padding-top: 5px;
 	position: absolute; 
 	top: -190%;
-	left: 62.5%;
+	left: 70%;
 	visibility: hidden;
+	transform: translateX(-50%);
 }
 .colorbox {
 	display: inline-block;
@@ -141,11 +142,12 @@ h2 {
 	width: 60px; 
 	position: absolute;
 	top: -460%; 
-	left: 42.5%;
+	left: 50%;
 	padding-top: 5px;
 	padding-bottom: 5px; 
 	text-align: center; 
 	visibility: hidden;
+	transform: translateX(-50%);
 }
 .tshirtsize {
 	height: 60%;
@@ -158,8 +160,8 @@ h2 {
 }
 #size:hover ~ #tshirtSizeSelection, #tshirtSizeSelection:hover {
 	visibility: visible;
-	transition: 1s; 
-	transform: translate(0,10%);
+	transition: 1s ease; 
+	top: -420%;
 }
 #arrow_down1 {
 	position: absolute;
